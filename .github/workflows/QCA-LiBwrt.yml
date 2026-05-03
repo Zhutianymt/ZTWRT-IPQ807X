@@ -2,7 +2,7 @@
 # Copyright (C) 2026 VIKINGYFY
 
 #CI项目
-name: QCA-ALL
+name: QCA-LiBwrt
 
 #CI计划
 on:
@@ -38,7 +38,7 @@ jobs:
         CONFIG: [IPQ807X-WIFI-YES]
 
    #调用公用编译核心WRT-CORE.yml
-    uses: ./.github/workflows/LiBwrt-core.yml
+    uses: ./.github/workflows/LiBwrt-CORE.yml
     with:
       #编译配置
       WRT_CONFIG: ${{matrix.CONFIG}}
