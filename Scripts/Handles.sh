@@ -92,3 +92,53 @@ if [ -f "$RUST_FILE" ]; then
 
 	cd $PKG_PATH && echo "rust has been fixed!"
 fi
+
+# 修复 quickstart（避免菜单异常 / 依赖问题）
+QS_DIR=$(find ./ ../feeds/ -maxdepth 3 -type d -iname "*luci-app-quickstart*" 2>/dev/null | head -n 1)
+if [ -n "$QS_DIR" ]; then
+    echo " "
+    echo "Fix quickstart..."
+
+    # 有些版本菜单位置不对
+    MENU_FILE=$(find "$QS_DIR" -type f -name "*.json" 2>/dev/null)
+    if [ -n "$MENU_FILE" ]; then
+        sed -i 's/"services"/"system"/g' "$MENU_FILE"
+    fi
+
+    echo "quickstart has been fixed!"
+fi
+
+
+# 修复 diskman（ntfs3 替换 + 依赖清理）
+DM_DIR=$(find ./ ../feeds/ -maxdepth 3 -type d -iname "*luci-app-diskman*" 2>/dev/null | head -n 1)
+if [ -n "$DM_DIR" ]; then
+    echo " "
+    echo "Fix diskman..."
+
+    MAKEFILE="$DM_DIR/Makefile"
+    if [ -f "$MAKEFILE" ]; then
+        sed -i 's/fs-ntfs /fs-ntfs3 /g' "$MAKEFILE"
+        sed -i '/ntfs-3g-utils/d' "$MAKEFILE"
+    fi
+
+    echo "diskman has been fixed!"
+fi
+
+
+# 修复 istorex（菜单 + 兼容）
+IS_DIR=$(find ./ ../feeds/ -maxdepth 3 -type d -iname "*istore*" 2>/dev/null | head -n 1)
+if [ -n "$IS_DIR" ]; then
+    echo " "
+    echo "Fix istorex..."
+
+    # 防止和旧 istore 冲突
+    rm -rf ../feeds/luci/applications/luci-app-store 2>/dev/null
+
+    # 菜单位置统一
+    MENU_FILE=$(find "$IS_DIR" -type f -name "*.json" 2>/dev/null)
+    if [ -n "$MENU_FILE" ]; then
+        sed -i 's/"nas"/"services"/g' "$MENU_FILE"
+    fi
+
+    echo "istorex has been fixed!"
+fi
