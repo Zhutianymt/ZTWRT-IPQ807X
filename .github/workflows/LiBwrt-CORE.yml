@@ -98,7 +98,7 @@ jobs:
 
       - name: Clone Code
         run: |
-          git clone --depth=1 --single-branch --branch main https://github.com/LiBwrt/openwrt-6.x ./wrt/
+          git clone --depth=1 --single-branch --branch main-nss https://github.com/LiBwrt/openwrt-6.x ./wrt/
 
           cd ./wrt/ && echo "WRT_HASH=$(git log -1 --pretty=format:'%h')" >> $GITHUB_ENV
 
