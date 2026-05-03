@@ -61,7 +61,7 @@ env:
 
 jobs:
   core:
-    name: ${{inputs.WRT_SOURCE}}
+    name: LiBwrt-CORE
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Projects
