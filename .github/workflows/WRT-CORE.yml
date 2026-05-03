@@ -232,7 +232,7 @@ jobs:
           tag_name: ${{env.WRT_CONFIG}}-${{env.WRT_INFO}}-${{env.WRT_BRANCH}}-${{env.WRT_DATE}}
           files: ./wrt/upload/*.*
           body: |
-            这是个fork自https://github.com/VIKINGYFY/OpenWRT-CI的'自用'固件包，删除了大多数设备，只保留了3个XIAOMI设备！
+            这是个fork自  https://github.com/VIKINGYFY/OpenWRT-CI  的'自用'固件包，删除了大多数设备，只保留了3个XIAOMI设备！
             请注意选择你需要的设备固件！
             不要问，刷就完事了！
 
