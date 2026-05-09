@@ -52,6 +52,8 @@ UPDATE_PACKAGE "quickstart" "sirpdboy/luci-app-quickstart" "main"
 
 UPDATE_PACKAGE "open-app-filter" "destan19/OpenAppFilter" "master" "" "luci-app-appfilter oaf"
 
+UPDATE_PACKAGE "qosify" "openwrt/packages" "master" "pkg"
+
 UPDATE_PACKAGE "argon" "sbwml/luci-theme-argon" "openwrt-25.12"
 UPDATE_PACKAGE "aurora" "eamonxg/luci-theme-aurora" "master"
 UPDATE_PACKAGE "aurora-config" "eamonxg/luci-app-aurora-config" "master"
