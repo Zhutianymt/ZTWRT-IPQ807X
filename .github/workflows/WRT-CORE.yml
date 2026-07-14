@@ -106,8 +106,8 @@ jobs:
           cd ./wrt/ && curl -sSL https://raw.githubusercontent.com/mufeng05/turboacc/main/add_turboacc.sh -o add_turboacc.sh && bash add_turboacc.sh
 
           # uugamebooster
-          svn export https://github.com/coolsnowwolf/luci/trunk/applications/luci-app-uugamebooster ./wrt/package/luci-app-uugamebooster
-
+          svn export https://github.com/coolsnowwolf/luci/branches/openwrt-25.12/applications/luci-app-uugamebooster ./wrt/package/luci-app-uugamebooster
+          
           cd ./wrt/ && echo "WRT_HASH=$(git log -1 --pretty=format:'%h')" >> $GITHUB_ENV
 
 
