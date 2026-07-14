@@ -102,9 +102,6 @@ jobs:
 
           git clone https://github.com/zzsj0928/luci-app-pushbot ./wrt/package/luci-app-pushbot
           git clone --depth=1 https://github.com/animegasan/luci-app-wolplus ./wrt/package/luci-app-wolplus
-          # turboacc
-          cd ./wrt/ && curl -sSL https://raw.githubusercontent.com/mufeng05/turboacc/main/add_turboacc.sh -o add_turboacc.sh && bash add_turboacc.sh
-
           cd ./wrt/ && echo "WRT_HASH=$(git log -1 --pretty=format:'%h')" >> $GITHUB_ENV
 
           # GitHub Action 移除国内下载源
