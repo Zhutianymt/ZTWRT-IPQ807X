@@ -101,7 +101,7 @@ jobs:
           git clone --depth=1 --single-branch --branch $WRT_BRANCH $WRT_REPO ./wrt/
 
           git clone https://github.com/zzsj0928/luci-app-pushbot ./wrt/package/luci-app-pushbot
-          git clone --depth=1 https://github.com/animegasan/luci-app-wolplus package/luci-app-wolplus
+          git clone --depth=1 https://github.com/animegasan/luci-app-wolplus ./wrt/package/luci-app-wolplus
 
 
           cd ./wrt/ && echo "WRT_HASH=$(git log -1 --pretty=format:'%h')" >> $GITHUB_ENV
