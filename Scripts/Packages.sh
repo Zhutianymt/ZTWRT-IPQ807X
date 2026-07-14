@@ -86,7 +86,6 @@ UPDATE_PACKAGE "qbittorrent" "sbwml/luci-app-qbittorrent" "master" "" "qt6base q
 UPDATE_PACKAGE "qmodem" "FUjr/QModem" "main"
 UPDATE_PACKAGE "quickfile" "sbwml/luci-app-quickfile" "main"
 UPDATE_PACKAGE "timecontrol" "sirpdboy/luci-app-timecontrol" "main"
-UPDATE_PACKAGE "luci-app-wolplus" "VIKINGYFY/packages" "main" "pkg"
 UPDATE_PACKAGE "luci-app-timewol" "VIKINGYFY/packages" "main" "pkg"
 UPDATE_PACKAGE "gecoosac" "VIKINGYFY/packages" "main" "pkg"
 UPDATE_PACKAGE "vnt" "lmq8267/luci-app-vnt" "main"
