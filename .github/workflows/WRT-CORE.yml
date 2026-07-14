@@ -102,14 +102,14 @@ jobs:
 
           git clone https://github.com/zzsj0928/luci-app-pushbot ./wrt/package/luci-app-pushbot
           git clone --depth=1 https://github.com/animegasan/luci-app-wolplus ./wrt/package/luci-app-wolplus
-          # turboacc — 运行安装脚本（内核补丁 + 文件复制）
-          curl -sSL https://raw.githubusercontent.com/mufeng05/turboacc/main/add_turboacc.sh -o ./wrt/add_turboacc.sh
-          cd ./wrt/ && bash add_turboacc.sh
+          # turboacc
+          cd ./wrt/ && curl -sSL https://raw.githubusercontent.com/mufeng05/turboacc/main/add_turboacc.sh -o add_turboacc.sh && bash add_turboacc.sh
 
-          # uugamebooster — svn 提取 coolsnowwolf/luci 子目录
+          # uugamebooster
           svn export https://github.com/coolsnowwolf/luci/trunk/applications/luci-app-uugamebooster ./wrt/package/luci-app-uugamebooster
 
           cd ./wrt/ && echo "WRT_HASH=$(git log -1 --pretty=format:'%h')" >> $GITHUB_ENV
+
 
           # GitHub Action 移除国内下载源
           PROJECT_MIRRORS_FILE="./scripts/projectsmirrors.json"
