@@ -103,6 +103,7 @@ jobs:
           git clone https://github.com/zzsj0928/luci-app-pushbot ./wrt/package/luci-app-pushbot
           git clone --depth=1 https://github.com/animegasan/luci-app-wolplus ./wrt/package/luci-app-wolplus
           git clone --depth=1 https://github.com/animegasan/luci-app-quickstart ./wrt/package/luci-app-quickstart
+          sed -i 's/PKG_RELEASE:=20230817/PKG_RELEASE:=1/' ./wrt/package/luci-app-quickstart/Makefile
 
           cd ./wrt/ && echo "WRT_HASH=$(git log -1 --pretty=format:'%h')" >> $GITHUB_ENV
 
