@@ -157,3 +157,9 @@ if [ -n "$SYS_MENU" ]; then
     echo "system plugins menu removed"
 fi
 
+# 修改 Tailscale 菜单位置到"服务"
+TS_MENU=$(find ./ ../feeds/ -path "*/luci-app-tailscale/root/usr/share/luci/menu.d/luci-app-tailscale.json" 2>/dev/null | head -n 1)
+if [ -n "$TS_MENU" ]; then
+    sed -i 's/"admin\/vpn\/tailscale"/"admin\/services\/tailscale"/g' "$TS_MENU"
+    echo "tailscale menu moved to services"
+fi
