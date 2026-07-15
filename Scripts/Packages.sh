@@ -48,7 +48,7 @@ UPDATE_PACKAGE() {
 
 # UPDATE_PACKAGE "包名" "项目地址" "项目分支" "pkg/name，可选，pkg为从大杂烩中单独提取包名插件；name为重命名为包名"
 # quickstart（含 luci-app-quickstart）
-UPDATE_PACKAGE "quickstart" "sirpdboy/luci-app-quickstart" "main"
+UPDATE_PACKAGE "quickstart" "linkease/luci-app-quickstart" "main"
 
 UPDATE_PACKAGE "open-app-filter" "destan19/OpenAppFilter" "master" "" "luci-app-appfilter oaf"
 
