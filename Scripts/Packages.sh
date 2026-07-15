@@ -53,8 +53,8 @@ UPDATE_PACKAGE "quickstart" "sirpdboy/luci-app-quickstart" "main"
 UPDATE_PACKAGE "open-app-filter" "destan19/OpenAppFilter" "master" "" "luci-app-appfilter oaf"
 
 UPDATE_PACKAGE "qosify" "openwrt/packages" "master" "pkg"
-UPDATE_PACKAGE "eqosplus" "sirpdboy/luci-app-eqosplus" "main"
 
+UPDATE_PACKAGE "eqosplus" "Zhutianymt/luci-app-eqosplus" "main"
 
 UPDATE_PACKAGE "luci-app-adguardhome" "sunset2104/openwrt-packages" "master" "pkg"
 
