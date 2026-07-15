@@ -7,8 +7,6 @@ CONFIG_PACKAGE_jq=y
 # OpenAppFilter 工具
 CONFIG_PACKAGE_luci-app-appfilter=y
 CONFIG_PACKAGE_luci-app-oaf=y
-# 设置向导（仿istore）工具
-CONFIG_PACKAGE_luci-app-netwizard=n
 # sqm 工具
 CONFIG_PACKAGE_sqm-scripts-nss=n
 CONFIG_PACKAGE_luci-app-sqm=n
