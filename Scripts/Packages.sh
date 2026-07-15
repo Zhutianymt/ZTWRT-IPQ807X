@@ -87,7 +87,8 @@ UPDATE_PACKAGE "qmodem" "FUjr/QModem" "main"
 UPDATE_PACKAGE "quickfile" "sbwml/luci-app-quickfile" "main"
 UPDATE_PACKAGE "timecontrol" "sirpdboy/luci-app-timecontrol" "main"
 UPDATE_PACKAGE "vnt" "lmq8267/luci-app-vnt" "main"
-UPDATE_PACKAGE "viking" "VIKINGYFY/packages" "main" "" "axonhub gecoosac luci-app-timewol luci-app-wolultra"
+UPDATE_PACKAGE "viking" "Zhutianymt/VIKINGFY-packages" "main" "" "axonhub gecoosac luci-app-timewol luci-app-wolultra"
+
 
 #更新软件包版本
 UPDATE_VERSION() {
