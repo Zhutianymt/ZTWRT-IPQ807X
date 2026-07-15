@@ -142,3 +142,18 @@ if [ -n "$IS_DIR" ]; then
 
     echo "istorex has been fixed!"
 fi
+
+# 修改 UPnP IGD 菜单位置到"网络"
+UPNP_MENU=$(find ./ ../feeds/ -path "*/luci-app-upnp/root/usr/share/luci/menu.d/luci-app-upnp.json" 2>/dev/null | head -n 1)
+if [ -n "$UPNP_MENU" ]; then
+    sed -i 's/"admin\/services\/upnp"/"admin\/network\/upnp"/g' "$UPNP_MENU"
+    echo "upnp menu moved to network"
+fi
+
+# 删除系统菜单下的"插件"项
+SYS_MENU=$(find ./ ../feeds/ -path "*/luci-mod-system/root/usr/share/luci/menu.d/luci-mod-system.json" 2>/dev/null | head -n 1)
+if [ -n "$SYS_MENU" ]; then
+    sed -i '/"admin\/system\/plugins": {/,/^\t},$/d' "$SYS_MENU"
+    echo "system plugins menu removed"
+fi
+
