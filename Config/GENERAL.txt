@@ -10,8 +10,8 @@ CONFIG_PACKAGE_luci-app-pushbot=y
 CONFIG_PACKAGE_iputils-arping=y
 CONFIG_PACKAGE_jq=y
 # OpenAppFilter 工具
-CONFIG_PACKAGE_luci-app-appfilter=y
-CONFIG_PACKAGE_luci-app-oaf=y
+CONFIG_PACKAGE_luci-app-appfilter=n
+CONFIG_PACKAGE_luci-app-oaf=n
 # sqm 工具
 CONFIG_PACKAGE_sqm-scripts-nss=n
 CONFIG_PACKAGE_luci-app-sqm=n
@@ -41,9 +41,9 @@ CONFIG_PACKAGE_wireguard-tools=y
 CONFIG_PACKAGE_kmod-wireguard=y
 CONFIG_PACKAGE_luci-app-tailscale=y
 # Lucky 配置
-# CONFIG_PACKAGE_lucky=y
-# CONFIG_PACKAGE_luci-app-lucky=y
-# CONFIG_PACKAGE_luci-i18n-lucky-zh-cn=y
+# CONFIG_PACKAGE_lucky=n
+# CONFIG_PACKAGE_luci-app-lucky=n
+# CONFIG_PACKAGE_luci-i18n-lucky-zh-cn=n
 # 页面终端
 CONFIG_PACKAGE_luci-app-ttyd=y
 # 基础依赖-加速相关
