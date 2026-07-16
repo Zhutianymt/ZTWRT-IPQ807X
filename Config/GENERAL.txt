@@ -1,7 +1,7 @@
 # BBR 拥塞控制 + DNS 缓存 + Flow Offloading
 # CONFIG_PACKAGE_luci-app-turboacc=n
 # 网盘聚合openlist
-CONFIG_PACKAGE_luci-app-openlist2=y
+CONFIG_PACKAGE_luci-app-openlist2=n
 # istore os 界面和商店
 CONFIG_PACKAGE_luci-app-quickstart=n
 CONFIG_PACKAGE_luci-app-store=n
