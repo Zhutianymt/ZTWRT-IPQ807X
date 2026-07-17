@@ -164,3 +164,10 @@ if [ -n "$TS_MENU" ]; then
     sed -i 's/admin\/vpn\/tailscale/admin\/services\/tailscale/g' $(find ./ -path "*/luci-app-tailscale/luasrc/controller/*.lua" 2>/dev/null)
     echo "tailscale menu moved to services"
 fi
+
+# 修复 luci-light 缺少 luci-theme-alpha 依赖
+LIGHT_MAKE=$(find ../feeds/ -path "*/luci-light/Makefile" 2>/dev/null | head -n 1)
+if [ -n "$LIGHT_MAKE" ]; then
+    sed -i 's/+luci-theme-alpha //g' "$LIGHT_MAKE"
+    echo "luci-light fixed: removed luci-theme-alpha dep"
+fi
