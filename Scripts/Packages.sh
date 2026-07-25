@@ -56,7 +56,7 @@ UPDATE_PACKAGE "qosify" "openwrt/packages" "master" "pkg"
 
 UPDATE_PACKAGE "eqosplus" "Zhutianymt/luci-app-eqosplus" "main"
 
-UPDATE_PACKAGE "luci-app-adguardhome" "sunset2104/openwrt-packages" "master" "pkg"
+UPDATE_PACKAGE "luci-app-adguardhome" "kenzok78/luci-app-adguardhome" "main"
 
 UPDATE_PACKAGE "argon" "sbwml/luci-theme-argon" "openwrt-25.12"
 UPDATE_PACKAGE "aurora" "eamonxg/luci-theme-aurora" "master"
